@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checklist Creator</title>
+
+        <!-- Scripts -->
+        <script src="./scripts/controls.js"></script>
+
+        <!-- Styles -->
+        <link href="./styles/main.css" type="text/css" rel="stylesheet" />
+        <link href="./styles/controls.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="models">
+            <!-- Control container: -->
+            <div id="model_control" class="control">
+                <!-- Menu options: -->
+                <div class="control-button left move" draggable="true">
+                    <img src="./resources/grip-vertical.svg">
+                </div>
+                <div class="control-button right delete">
+                    <img src="./resources/trash.svg">
+                </div>
+            </div>
+
+            <!-- "Add control" button/menu -->
+            <div id="model_add" class="create collapsed">
+                <!-- "button" to add a new control: -->
+                <a href="#" >
+                    <hr />
+                </a>
+                <!-- popup menu to select the control: -->
+                <div class="add-menu">
+                </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div id="model_checkbox" class="checkbox">
+                <input type="checkbox" />
+                <input type="text" placeholder="Checklist item" />
+            </div>
+
+            <!-- Section / title -->
+            <div id="model_heading">
+                <h2 class="heading">
+                    <input type="text" placeholder="Heading text" />
+                    <hr />
+                </h2>
+            </div>
+
+            <!-- Notepad -->
+            <div id="model_notepad" class="notepad">
+                <input type="text" placeholder="Note prompt" />
+                <textarea></textarea>
+            </div>
+
+            <!-- Short note -->
+            <div id="model_short_note" class="short-note">
+                <input type="text" placeholder="Note prompt" />
+                <input type="text" />
+            </div>
+        </section>
+    </body>
+</html>

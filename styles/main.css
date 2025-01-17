@@ -1,0 +1,149 @@
+:root {
+    --line-height: 14pt;
+    line-height: var(--line-height);
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #242424;
+    color: #FFFFFF;
+    margin: 0.25in;
+}
+
+/* Model section */
+section.models {
+    display: none;
+}
+
+
+/* Main container */
+main.checklist {
+    width: calc(100vw - 1in);
+    max-width: 8in;
+    padding: 0.25in;
+    border-radius: 16pt;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(200,200,200, 0.1);
+}
+
+
+/* Generic control */
+div.control {
+    margin-top: calc(var(--line-height) / 4);
+}
+div.control-container {
+    min-height: calc(var(--line-height) * 2);
+}
+div.control-button {
+    width: calc(var(--line-height) * 2);
+    height: calc(var(--line-height) * 2);
+    vertical-align: middle;
+}
+div.control-button img {
+    width: 60%;
+    margin: 20%;
+}
+div.control-button.left {
+    float: left;
+    margin-right: calc(var(--line-height) / 2);
+}
+div.control-button.right {
+    float: right;
+    margin-left: calc(var(--line-height) / 2);
+}
+div.control-button.move {
+    cursor: move;
+}
+div.control-button.delete {
+    cursor: pointer;
+}
+
+
+/* CREATE NEW control button/divider */
+div.create a {
+    display: block;
+    margin-top: calc(var(--line-height) / 4);
+    padding-top: calc(var(--line-height) / 4);
+    padding-bottom: calc(var(--line-height) / 4);
+    cursor: pointer;
+}
+div.create a:hover hr {
+    color: #629fd8;
+    background-color: #629fd8;
+    box-shadow: 0 0 6pt #629fd8;
+}
+div.create a:focus {
+    outline: none;
+}
+div.create a:focus hr {
+    color: #FFFFFF;
+    outline: 2pt solid #629fd8;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8pt #FFFFFF;
+}
+div.create a hr {
+    height: 2pt;
+    border-radius: 1pt;
+    vertical-align: middle;
+    background-color: rgba(136, 136, 136, 0.15);
+    color: rgba(136, 136, 136, 0.15);
+}
+/* Create new control menu */
+div.create:not(.expanded) div.add-menu {
+    display: none;
+}
+div.add-menu button {
+    cursor: pointer;
+    padding: calc(var(--line-height) / 2);
+    margin-right: calc(var(--line-height) / 2);
+}
+div.add-menu button img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(var(--line-height) / 4);
+    width: calc(2 * var(--line-height));
+    height: calc(2 * var(--line-height));
+}
+
+
+/* Text */
+h1.title {
+    text-align: center;
+}
+
+
+/* Inputs */
+input, button, textarea {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background-color: rgba(136,136,136, 0.15);
+    border: none;
+    border-radius: 4pt;
+    padding: 4pt;
+    text-align: inherit;
+}
+
+
+/* changes for printing */
+@media print {
+    body{
+        margin: 0in;
+        color: #000000;
+    }
+
+    main.checklist {
+        padding: 0in;
+        width: 100vw;
+    }
+
+    /* controls to hide: */
+    div.create {
+        display: none;
+    }
+    div.control-button {
+        display: none;
+    }
+}

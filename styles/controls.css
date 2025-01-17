@@ -1,0 +1,53 @@
+/* Heading */
+h2.heading {
+    display: flex;
+    flex-direction: column;
+}
+h2.heading hr {
+    display: none;
+}
+
+/* Checkbox */
+div.checkbox {
+    display: flex;
+    align-items: center;
+}
+div.checkbox input {
+    width: 100%;
+}
+div.checkbox input[type="checkbox"] {
+    width: calc(var(--line-height) + 8pt);
+    height: calc(var(--line-height) + 8pt);
+    margin-right: calc(var(--line-height) / 2);
+    cursor: pointer;
+}
+
+/* Notepad */
+div.notepad {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--line-height) / 2);
+}
+div.notepad textarea {
+    resize: vertical;
+}
+
+/* Notepad */
+div.short-note {
+    display: flex;
+    column-gap: calc(var(--line-height) / 2);
+}
+div.short-note input {
+    width: 100%;
+}
+
+
+/* changes for printing */
+@media print {
+    h2.heading hr {
+        display: default;
+    }
+    div.notepad textarea {
+        border: 1pt solid #000000;
+    }
+}
