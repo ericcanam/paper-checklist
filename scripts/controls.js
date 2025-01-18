@@ -70,7 +70,7 @@ class Checklist {
         grip.addEventListener("dragstart", (e) => {
             // drag
             this.CollapseAllControlCreators();
-            e.dataTransfer.setData("id", obj.Id);
+            e.dataTransfer.setData("control_id", obj.Id);
             obj.DomObject.style.display = "none";
         });
         obj.DomObject.addEventListener("dragend", (e) => {
@@ -124,21 +124,23 @@ class Checklist {
         link.addEventListener("dragover", (e) => {
             // drag & hover
             e.preventDefault();
+            link.classList.add("droppable");
         });
         link.addEventListener("dragenter", (e) => {
             // drag & hover
-            console.log(e);
             e.preventDefault();
+            link.classList.add("droppable");
         });
         link.addEventListener("dragleave", (e) => {
             // drag & hover
-            console.log(e);
             e.preventDefault();
+            link.classList.remove("droppable");
         });
         link.addEventListener("drop", (e) => {
             // drop
             e.preventDefault();
-            let draggedId = e.dataTransfer.getData("id");
+            link.classList.remove("droppable");
+            let draggedId = e.dataTransfer.getData("control_id");
             if(!draggedId.startsWith("control_")){
                 // this is NOT a control
                 return;

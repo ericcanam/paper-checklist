@@ -68,7 +68,7 @@ div.create a {
     padding-bottom: calc(var(--line-height) / 4);
     cursor: pointer;
 }
-div.create a:hover hr {
+div.create a:hover hr, div.create a.droppable hr {
     color: #629fd8;
     background-color: #629fd8;
     box-shadow: 0 0 6pt #629fd8;
@@ -97,6 +97,7 @@ div.add-menu button {
     cursor: pointer;
     padding: calc(var(--line-height) / 2);
     margin-right: calc(var(--line-height) / 2);
+    margin-bottom: calc(var(--line-height) / 2);
 }
 div.add-menu button img {
     display: block;
